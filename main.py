@@ -1,4 +1,4 @@
-from utilitarios.vpython_utilitario import VpythonUtilitario
+from utilitarios.vpython_manager import VpythonManager
 import vpython as vp
 
 if __name__ == '__main__':
@@ -16,11 +16,8 @@ if __name__ == '__main__':
     # vp.scene.autoscale = True
     # vp.scene.width = 700
     # print(os.get_terminal_size())
-    sistema = VpythonUtilitario()
+    sistema = VpythonManager()
 
-    sistema.adicionar_titulo("brenno")
-    sistema.adicionar_titulo("brenno2")
-    sistema.adicionar_titulo("brenno3")
-    sistema.adicionar_titulo("brenno4")
+    sistema.adicionar_titulo("Simulação de Cinemática e Dinâmica de uma Partícula")
     # Display text input prompt in the console
     user_input = input("Enter something: ")

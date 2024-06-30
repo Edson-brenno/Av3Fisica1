@@ -1,7 +1,7 @@
 import vpython as vp
 import time
 
-class VpythonUtilitario():
+class VpythonManager():
 
     def __init__(self) -> None:
 
@@ -34,7 +34,6 @@ class VpythonUtilitario():
         t.height = 100
 
 
-        novo_titulo = vp.text(text=titulo, align='center', color=cor, background=vp.color.white, 
-                              pos= vp.vector(0, 0, 0), height=2, canvas=t)
+        novo_titulo = vp.text(text=titulo, align='center', color=cor, pos= vp.vector(0, 0, 0), height=2, canvas=t)
         
         self.__acrescer_posicao_y()
