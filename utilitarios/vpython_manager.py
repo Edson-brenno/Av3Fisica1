@@ -39,5 +39,7 @@ class VpythonManager():
     def adicionar_texto(self, texto : str, cor=vp.color.black):
         
         novaCena = vp.canvas(background= vp.color.white, autoscale = True)
+        novaCena.center = vp.vector(0, 0, 0)
         
-        wtext = vp.text(text=texto, color=cor, height= 0.5, canvas=novaCena)
+        wtext = vp.text(text=texto, color=cor, height= 1, align='center', canvas=novaCena, pos= vp.vector(0, 0, 0))
+        
