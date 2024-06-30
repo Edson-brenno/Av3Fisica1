@@ -30,10 +30,14 @@ class VpythonManager():
         t.background = vp.color.white
         t.center = vp.vector(0, 0, 0)  # Centering the scene to show both objects
         t.autoscale = True
-        t.width = 700
-        t.height = 100
 
 
-        novo_titulo = vp.text(text=titulo, align='center', color=cor, pos= vp.vector(0, 0, 0), height=2, canvas=t)
+        novo_titulo = vp.text(text=titulo, align='center', color=cor, pos= vp.vector(0, 0, 0), height=1, canvas=t)
         
         self.__acrescer_posicao_y()
+
+    def adicionar_texto(self, texto : str, cor=vp.color.black):
+        
+        novaCena = vp.canvas(background= vp.color.white, autoscale = True)
+        
+        wtext = vp.text(text=texto, color=cor, height= 0.5, canvas=novaCena)
