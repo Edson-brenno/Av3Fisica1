@@ -72,8 +72,37 @@ if __name__ == '__main__':
                 "</ul>" +
         "</li>" +
         # Fim Item numero 4 Velocidade Média
-    "</ol>"
+    "</ol>" + 
     # Fim Resolução opção a
+    
+    # Resolução opção b
+    "<b>(B) Aceleração média(<sup>A</sup>méd) no intervalo de tempo de 2,00 min a 8,00 min?</b>" +
+    "<ol>" +
+        # Item numero 1 velocidade inicial
+        f"<li>{MetodosEspeciaisHtml.para_bold("Velocidade Inicial")} ({MetodosEspeciaisHtml.para_exponenciacao_esquerda("v", "inicial")}): " +
+                f"0 m/s (parado)"+
+        "</li>" +
+        # Fim Item numero 1 velocidade inicial
+        
+        # Item numero 2 velocidade Final
+        f"<li>{MetodosEspeciaisHtml.para_bold("Velocidade Final")} ({MetodosEspeciaisHtml.para_exponenciacao_esquerda("v", "final")}): " +
+                f" {velocidade_movimento} m/s (após {minuto_inicio_movimento} min)"+
+        "</li>" +
+        # Fim Item numero 2 velocidade Final
+        
+        # Item numero 3 Aceleração media
+        f"<li>{MetodosEspeciaisHtml.para_bold("Aceleração média")} ({MetodosEspeciaisHtml.para_exponenciacao_esquerda("a", "méd")}): " +
+                f"<br>"+
+                f"{MetodosEspeciaisHtml.para_exponenciacao_esquerda("a", "méd")} = ({MetodosEspeciaisHtml.para_exponenciacao_esquerda("v", "final")} - "+
+                    f"{MetodosEspeciaisHtml.para_exponenciacao_esquerda("v", "inicial")}) {MetodosEspeciaisHtml.simbolo_divisao()} " +
+                    f"({MetodosEspeciaisHtml.para_exponenciacao_esquerda("t", "final")} - {MetodosEspeciaisHtml.para_exponenciacao_esquerda("t", "incial")})"+
+                    f" &asymp; " + f"{(velocidade_movimento - 0) / (Conversoes.from_minutos_para_segundos(minutos_finais) - Conversoes.from_minutos_para_segundos(minutos_inciais)):.4f} m/s²"
+                    
+        "</li>" +
+        # Fim Item numero 3 Aceleração media
+        
+    "</ol>"
+    # Fim Resolução opção b
   )
     
     sistema.adicionar_titulo("a")
