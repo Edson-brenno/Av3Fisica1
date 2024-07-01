@@ -8,8 +8,10 @@ if __name__ == '__main__':
     sistema = VpythonManager()
     
     minutos_inciais = 2
+    minutos_inciais_2 = 3
     minuto_inicio_movimento = 5
     minutos_finais = 8
+    minutos_finais_2 = 9
     velocidade_movimento = 2.2
     
     sistema.adicionar_titulo("Av3 Fisica 1", caption="<hr>" +
@@ -103,6 +105,65 @@ if __name__ == '__main__':
         
     "</ol>"
     # Fim Resolução opção b
+    
+    # Resolução opção C
+    "<b>(A) Velocidade média(<sup>v</sup>méd) no intervalo de tempo de 3,00 min a 9,00 min?</b>" +
+    "<ol>" +
+        # Item numero 1 intervalor de tempo
+        "<li><b>intervalo de Tempo</b>: 3,00 <b>min</b> e 9,00 <b>min</b>" +
+            "<ul>" +
+                f"<li><sup>t</sup>inicial = {minutos_inciais_2} min = {Conversoes.from_minutos_para_segundos(minutos_inciais_2)} = {Conversoes.from_minutos_para_segundos(minutos_inciais_2)}s.</li>" +
+                f"<li><sup>t</sup>final = 9 min = {Conversoes.from_minutos_para_segundos(minutos_finais_2)} = {Conversoes.from_minutos_para_segundos(minutos_finais_2)}s.</li>" +
+                f"<li>&Delta;t = <sup>t</sup>final - <sup>t</sup>inicial = "+
+                    f"{Conversoes.from_minutos_para_segundos(minutos_finais_2)} - {Conversoes.from_minutos_para_segundos(minutos_inciais_2)} = "+ 
+                    f"{Conversoes.from_minutos_para_segundos(minutos_finais_2) - Conversoes.from_minutos_para_segundos(minutos_inciais_2)}s.</li>" +
+            "</ul>" +
+        "</li>" +
+        # Fim Item numero 1 intervalor de tempo
+        
+        # Item numero 2 Divisão de intervalo
+        "<li><b>Divisão de intervalo</b>:" +
+            "<ul>" +
+                f"<li> De {minutos_inciais_2} min ({Conversoes.from_minutos_para_segundos(minutos_inciais_2)} s) a " +
+                    f"{minuto_inicio_movimento} min ({Conversoes.from_minutos_para_segundos(minuto_inicio_movimento)} s): o homem está parado.</li>" +
+                
+                f"<li> De {minuto_inicio_movimento} min ({Conversoes.from_minutos_para_segundos(minuto_inicio_movimento)} s) a " +
+                    f"{minutos_finais_2} min ({Conversoes.from_minutos_para_segundos(minutos_finais_2)} s): o homem está se movendo a {velocidade_movimento}m/s.</li>" +
+            "</ul>" +
+        "</li>" +
+        # Fim Item numero 2 Divisão de intervalo
+        
+        # Item numero 3 Deslocamento total
+        "<li><b>Deslocamento total</b>:" +
+            "<ul>" +
+                f"<li> De {minutos_inciais_2} min a " +
+                    f"{minuto_inicio_movimento} min: {MetodosEspeciaisHtml.para_exponenciacao_em_baixo_direita("1", MetodosEspeciaisHtml.para_delta("X"))} = 0 (o homem está parado.)</li>" +
+                
+                f"<li> De {minuto_inicio_movimento} min a " +
+                    f"{minutos_finais_2} min: {MetodosEspeciaisHtml.para_exponenciacao_em_baixo_direita("2", MetodosEspeciaisHtml.para_delta("X"))} = v x t = "+
+                        f"{velocidade_movimento} m/s x ({Conversoes.from_minutos_para_segundos(minutos_finais_2)} - {Conversoes.from_minutos_para_segundos(minuto_inicio_movimento)}) = "+ 
+                        f"{velocidade_movimento} m/s x ({Conversoes.from_minutos_para_segundos(minutos_finais_2) - Conversoes.from_minutos_para_segundos(minuto_inicio_movimento)})s = "+
+                        f"{velocidade_movimento * (Conversoes.from_minutos_para_segundos(minutos_finais_2) - Conversoes.from_minutos_para_segundos(minuto_inicio_movimento)):.2f} m"+
+            "</ul>" +
+        "</li>" +
+        # Fim Item numero 3 Deslocamento total
+        
+        # Item numero 4 Velocidade Média
+        f"<li>{MetodosEspeciaisHtml.para_bold("Velocidade Média")} ({MetodosEspeciaisHtml.para_exponenciacao_esquerda("v", "média")}):" +
+            "<ul>" +
+                f"<li> {MetodosEspeciaisHtml.para_exponenciacao_esquerda("v", "média")} = " +
+                    f" {MetodosEspeciaisHtml.para_delta("x")} {MetodosEspeciaisHtml.simbolo_divisao()} {MetodosEspeciaisHtml.para_delta("t")} = "+
+                    f"{velocidade_movimento * (Conversoes.from_minutos_para_segundos(minutos_finais_2) - Conversoes.from_minutos_para_segundos(minuto_inicio_movimento)):.2f} m "+ f"{MetodosEspeciaisHtml.simbolo_divisao()} " +
+                    f"{MetodosEspeciaisHtml.simbolo_divisao} " + f"{Conversoes.from_minutos_para_segundos(minutos_finais_2) - Conversoes.from_minutos_para_segundos(minutos_inciais_2)}s &asymp; " +
+                    f" {(velocidade_movimento * (Conversoes.from_minutos_para_segundos(minutos_finais_2) - Conversoes.from_minutos_para_segundos(minuto_inicio_movimento))) / (Conversoes.from_minutos_para_segundos(minutos_finais) - Conversoes.from_minutos_para_segundos(minutos_inciais)) }"+
+                    f" m/s"
+                "</li>" +
+                
+                "</ul>" +
+        "</li>" +
+        # Fim Item numero 4 Velocidade Média
+    "</ol>"
+    # Fim Resolução opção C
   )
     
     sistema.adicionar_titulo("a")
