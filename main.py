@@ -195,6 +195,6 @@ if __name__ == '__main__':
     # Fim Resolução opção d
   )
     
-    sistema.adicionar_titulo("a")
+    sistema.plotar_grafico()
     # Display text input prompt in the console
     user_input = input("Enter something: ")
