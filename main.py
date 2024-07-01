@@ -57,6 +57,21 @@ if __name__ == '__main__':
             "</ul>" +
         "</li>" +
         # Fim Item numero 3 Deslocamento total
+        
+        # Item numero 4 Velocidade Média
+        f"<li>{MetodosEspeciaisHtml.para_bold("Velocidade Média")} ({MetodosEspeciaisHtml.para_exponenciacao_esquerda("v", "média")}):" +
+            "<ul>" +
+                f"<li> {MetodosEspeciaisHtml.para_exponenciacao_esquerda("v", "média")} = " +
+                    f" {MetodosEspeciaisHtml.para_delta("x")} {MetodosEspeciaisHtml.simbolo_divisao()} {MetodosEspeciaisHtml.para_delta("t")} = "+
+                    f"{velocidade_movimento * (Conversoes.from_minutos_para_segundos(minutos_finais) - Conversoes.from_minutos_para_segundos(minuto_inicio_movimento)):.2f} m "+ f"{MetodosEspeciaisHtml.simbolo_divisao()} " +
+                    f"{MetodosEspeciaisHtml.simbolo_divisao} " + f"{Conversoes.from_minutos_para_segundos(minutos_finais) - Conversoes.from_minutos_para_segundos(minutos_inciais)}s = " +
+                    f" {(velocidade_movimento * (Conversoes.from_minutos_para_segundos(minutos_finais) - Conversoes.from_minutos_para_segundos(minuto_inicio_movimento))) / (Conversoes.from_minutos_para_segundos(minutos_finais) - Conversoes.from_minutos_para_segundos(minutos_inciais)) }"+
+                    f" m/s"
+                "</li>" +
+                
+                "</ul>" +
+        "</li>" +
+        # Fim Item numero 4 Velocidade Média
     "</ol>"
     # Fim Resolução opção a
   )

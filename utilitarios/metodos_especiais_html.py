@@ -36,3 +36,8 @@ class MetodosEspeciaisHtml:
     def para_exponenciacao_em_baixo_direita(texto_do_expoente : str, texto: str) -> str:
         
         return f"{texto}<sub>{MetodosEspeciaisHtml.para_bold(texto_do_expoente)}</sub>"
+    
+    @staticmethod
+    def simbolo_divisao() -> str:
+        
+        return "&divide;"
